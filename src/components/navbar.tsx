@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { ThemeToggle } from './theme-toggle'
 
 export default function Navbar() {
     const links = [
@@ -29,12 +30,16 @@ export default function Navbar() {
             <Link href="/signup" className='text-sm px-4 py-2 text-white transition-colors duration-200 bg-blue-600 hover:bg-blue-700 rounded-md font-medium whitespace-nowrap'>
                 Start free trial
             </Link>
+            {/* Theme toggle button */}
+            <ThemeToggle />
         </div>
         
         {/* Mobile menu button - positioned absolutely or use a different approach */}
         <div className='md:hidden absolute right-4'>
             <button className='text-neutral-600 p-2'>☰</button>
         </div>
+        
     </div>
   )
 }
+

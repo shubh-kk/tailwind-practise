@@ -2,12 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Hint the browser for native UI (scrollbars, form controls) */
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+
 @layer base {
     @apply box-border;
     @apply m-0 p-0;
 }
-
 body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-gray-100;
     font-family: 'Inter', sans-serif;
 }
